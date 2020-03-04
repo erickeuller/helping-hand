@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3F6C3B7D240DD26D005F150A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C3B7C240DD26D005F150A /* LoginViewController.swift */; };
+		3F6C3B80240F0F39005F150A /* SwiftCloudant in Frameworks */ = {isa = PBXBuildFile; productRef = 3F6C3B7F240F0F39005F150A /* SwiftCloudant */; };
+		3F6C3B82240F0F8E005F150A /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C3B81240F0F8E005F150A /* ConfigurationViewController.swift */; };
+		3F6C3B84240F1E75005F150A /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C3B83240F1E75005F150A /* NewUserViewController.swift */; };
 		3FC55C0B240DC2B300542EC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC55C0A240DC2B300542EC7 /* AppDelegate.swift */; };
 		3FC55C0D240DC2B300542EC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC55C0C240DC2B300542EC7 /* SceneDelegate.swift */; };
 		3FC55C0F240DC2B300542EC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC55C0E240DC2B300542EC7 /* ViewController.swift */; };
@@ -18,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		3F6C3B7C240DD26D005F150A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F6C3B81240F0F8E005F150A /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		3F6C3B83240F1E75005F150A /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		3FC55C07240DC2B300542EC7 /* HelpingHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpingHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC55C0A240DC2B300542EC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FC55C0C240DC2B300542EC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6C3B80240F0F39005F150A /* SwiftCloudant in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 				3FC55C15240DC2B500542EC7 /* LaunchScreen.storyboard */,
 				3FC55C18240DC2B500542EC7 /* Info.plist */,
 				3F6C3B7C240DD26D005F150A /* LoginViewController.swift */,
+				3F6C3B81240F0F8E005F150A /* ConfigurationViewController.swift */,
+				3F6C3B83240F1E75005F150A /* NewUserViewController.swift */,
 			);
 			path = HelpingHand;
 			sourceTree = "<group>";
@@ -86,6 +94,9 @@
 			dependencies = (
 			);
 			name = HelpingHand;
+			packageProductDependencies = (
+				3F6C3B7F240F0F39005F150A /* SwiftCloudant */,
+			);
 			productName = HelpingHand;
 			productReference = 3FC55C07240DC2B300542EC7 /* HelpingHand.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 3FC55BFE240DC2B300542EC7;
+			packageReferences = (
+				3F6C3B7E240F0F39005F150A /* XCRemoteSwiftPackageReference "swift-cloudant" */,
+			);
 			productRefGroup = 3FC55C08240DC2B300542EC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +158,8 @@
 				3F6C3B7D240DD26D005F150A /* LoginViewController.swift in Sources */,
 				3FC55C0F240DC2B300542EC7 /* ViewController.swift in Sources */,
 				3FC55C0B240DC2B300542EC7 /* AppDelegate.swift in Sources */,
+				3F6C3B82240F0F8E005F150A /* ConfigurationViewController.swift in Sources */,
+				3F6C3B84240F1E75005F150A /* NewUserViewController.swift in Sources */,
 				3FC55C0D240DC2B300542EC7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K848V49ZM;
 				INFOPLIST_FILE = HelpingHand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K848V49ZM;
 				INFOPLIST_FILE = HelpingHand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F6C3B7E240F0F39005F150A /* XCRemoteSwiftPackageReference "swift-cloudant" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cloudant/swift-cloudant.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F6C3B7F240F0F39005F150A /* SwiftCloudant */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F6C3B7E240F0F39005F150A /* XCRemoteSwiftPackageReference "swift-cloudant" */;
+			productName = SwiftCloudant;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3FC55BFF240DC2B300542EC7 /* Project object */;
 }

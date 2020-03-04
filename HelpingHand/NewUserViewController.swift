@@ -1,26 +1,19 @@
 //
-//  LoginViewController.swift
+//  NewUserViewController.swift
 //  HelpingHand
 //
-//  Created by Student on 02/03/20.
+//  Created by Student on 03/03/20.
 //  Copyright © 2020 Student. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class NewUserViewController: UIViewController {
 
-    @IBOutlet weak var emailText: UITextField!
-    @IBOutlet weak var passwordText: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    
-    @IBAction func loginButton(_ sender: Any) {
     }
     
 

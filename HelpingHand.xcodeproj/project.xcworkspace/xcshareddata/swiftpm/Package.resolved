@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftCloudant",
+        "repositoryURL": "https://github.com/cloudant/swift-cloudant.git",
+        "state": {
+          "branch": null,
+          "revision": "928748f5d3dc2cd0e7ad9ff61323489eeb680ef4",
+          "version": "0.9.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
