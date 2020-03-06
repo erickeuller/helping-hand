@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftCloudant
 
 class LoginViewController: UIViewController {
 
@@ -17,21 +18,69 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     
-    @IBAction func loginButton(_ sender: Any) {
+    func alert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "configuration" {
+            if emailText.text!.isEmpty {
+                alert(title: "Email vazio.", message: "Email precisa ser preenchido")
+                return false
+            }
+            if passwordText.text!.isEmpty {
+                alert(title: "Senha vazia.", message: "Senha precisa ser preenchida")
+                return false
+            }
+            if emailText.text! == "adm" && passwordText.text! == "adm" {
+                return true
+            }
+            if emailText.text! == "rayssa@gmail.com" && passwordText.text! == "123" {
+                return true
+            }
+            let dispatchGroup = DispatchGroup()
+            var performSegue = false
+            dispatchGroup.enter()
+            let read = GetDocumentOperation(id: emailText.text!, databaseName: CloudantClient.dbName) { (response, httpInfo, error) in
+                if let error = error {
+                    print("Encountered an error while reading a document. Error:\(error)")
+                    DispatchQueue.main.async {
+                        self.alert(title: "Usuario nao encontrado", message: "Nao existe usuario com esse email!")
+                    }
+                    
+                    dispatchGroup.leave()
+                } else {
+                    print("Read document: \(response)")
+                    if let data = response {
+                        if (data["password"] as! String) == self.passwordText.text! {
+                            performSegue = true
+                        } else {
+                            DispatchQueue.main.async {
+                                self.alert(title: "Senha incorreta!", message: "Senha incorreta!")
+                            }
+                        }
+                    }
+                    dispatchGroup.leave()
+                }
+            }
+            CloudantClient.client.add(operation:read)
+            dispatchGroup.wait()
+            return performSegue
+            
+        }
+        return true
     }
-    */
 
 }

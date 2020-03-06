@@ -11,6 +11,7 @@
 		3F6C3B80240F0F39005F150A /* SwiftCloudant in Frameworks */ = {isa = PBXBuildFile; productRef = 3F6C3B7F240F0F39005F150A /* SwiftCloudant */; };
 		3F6C3B82240F0F8E005F150A /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C3B81240F0F8E005F150A /* ConfigurationViewController.swift */; };
 		3F6C3B84240F1E75005F150A /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C3B83240F1E75005F150A /* NewUserViewController.swift */; };
+		3F6C3B8624105BE2005F150A /* CloudantClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C3B8524105BE2005F150A /* CloudantClient.swift */; };
 		3FC55C0B240DC2B300542EC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC55C0A240DC2B300542EC7 /* AppDelegate.swift */; };
 		3FC55C0D240DC2B300542EC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC55C0C240DC2B300542EC7 /* SceneDelegate.swift */; };
 		3FC55C0F240DC2B300542EC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC55C0E240DC2B300542EC7 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		3F6C3B7C240DD26D005F150A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F6C3B81240F0F8E005F150A /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		3F6C3B83240F1E75005F150A /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		3F6C3B8524105BE2005F150A /* CloudantClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudantClient.swift; sourceTree = "<group>"; };
 		3FC55C07240DC2B300542EC7 /* HelpingHand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpingHand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC55C0A240DC2B300542EC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FC55C0C240DC2B300542EC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				3F6C3B7C240DD26D005F150A /* LoginViewController.swift */,
 				3F6C3B81240F0F8E005F150A /* ConfigurationViewController.swift */,
 				3F6C3B83240F1E75005F150A /* NewUserViewController.swift */,
+				3F6C3B8524105BE2005F150A /* CloudantClient.swift */,
 			);
 			path = HelpingHand;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				3F6C3B7D240DD26D005F150A /* LoginViewController.swift in Sources */,
 				3FC55C0F240DC2B300542EC7 /* ViewController.swift in Sources */,
+				3F6C3B8624105BE2005F150A /* CloudantClient.swift in Sources */,
 				3FC55C0B240DC2B300542EC7 /* AppDelegate.swift in Sources */,
 				3F6C3B82240F0F8E005F150A /* ConfigurationViewController.swift in Sources */,
 				3F6C3B84240F1E75005F150A /* NewUserViewController.swift in Sources */,
